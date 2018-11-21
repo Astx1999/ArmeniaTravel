@@ -1,0 +1,38 @@
+body{
+  background-color: red;
+}
+img{
+  width: 100%;
+}
+.one img{
+  position: absolute;
+}
+
+.bg-light{
+  background-color: transparent!important;
+}
+nav a,
+select{
+  font-size: 10px;
+}
+.logo{
+  width: 250px;
+}
+.armenia_copy_2 {
+  font-size: 11px;
+  font-family: "Ubuntu";
+  color: rgb(254, 254, 254);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.819;
+  -moz-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
+  -webkit-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
+  -ms-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
+  position: absolute;
+  left: 937.626px;
+  top: 439.002px;
+  z-index: 27;
+}
+.firstbg{
+  z-index: -1;
+}
