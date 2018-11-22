@@ -1,38 +1,442 @@
-body{
-  background-color: red;
+* {
+margin:0;
+padding:0;
 }
-img{
+@font-face {
+	font-family: OpenSans;
+	src: url(../webfonts/OpenSans-Light.ttf);
+}
+@font-face {
+	font-family: Ubuntu;
+	src: url(../webfonts/Ubuntu-Light.ttf);
+}
+@font-face {
+	font-family: Ubuntu-bold;
+	src: url(../webfonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+	font-family: Ubuntu-medium;
+	src: url(../webfonts/Ubuntu-Medium.ttf);
+}
+img {
   width: 100%;
 }
-.one img{
+/* HEADER */
+header {
   position: absolute;
+  width: 100%;
 }
-
+/* nav {
+  z-index: 99;
+  top: 0;
+  padding: 0px 48px;
+} */
+.navbar-absolute-top {
+padding: 10px 50px;
+margin: 0;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 1000;
+width: inherit;
+left: 50%;
+transform: translateX(-50%);
+}
+.navbar-nav {
+  margin-top: 20px;
+}
 .bg-light{
   background-color: transparent!important;
 }
 nav a,
-select{
-  font-size: 10px;
+select {
+  font-size: 15px;
 }
-.logo{
-  width: 250px;
+.select {
+  border: none;
+  overflow: hidden;
+  height: 40px;
+  width: 50px;
+  position: relative;
+  display: block;
 }
-.armenia_copy_2 {
-  font-size: 11px;
-  font-family: "Ubuntu";
-  color: rgb(254, 254, 254);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.819;
-  -moz-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
-  -webkit-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
-  -ms-transform: matrix( 16.3742952873468,0,0,16.3742952873467,0,0);
+select:focus {
+  outline: none;
+}
+select {
+  color: grey;
+  background: transparent;
+  padding: 6px 20px 8px 3px;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select:after {
+  color: grey;
+  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0d7";
+  padding: 8px 15px;
+  position: absolute; right: 0; top: 0;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.logo {
+  max-width: 250px;
+}
+.navbar-collapse.collapse.in {
+  display: block !important;
+}
+
+/* HOME */
+.fontArmenia {
+  top: 50%;
+  width: 33rem;
+}
+.undercloud,
+.clouds {
   position: absolute;
-  left: 937.626px;
-  top: 439.002px;
-  z-index: 27;
 }
-.firstbg{
-  z-index: -1;
+.homecentral{
+  background-image: url(../img/firstback.png);
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homecentraltext{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -63%);
+  -ms-transform: translate(-50%, -63%);
+  transform: translate(-50%, -63%);
+}
+.homecentral p {
+  text-align: center;
+  font-family: Ubuntu;
+  color: white;
+  font-size: 30px;
+  margin: 0px auto 60px;
+}
+button {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Ubuntu;
+  color: #006a9c;
+  background-color: white;
+  border: none;
+  border-radius: 2.5px;
+  padding: 8px 34px;
+}
+ .homecentral button {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+/* ABOUT */
+
+.second_container{
+  background-color: #004270;
+  height: auto;
+}
+.aboutone{
+  display: flex;
+  flex-direction: row;
+}
+.number {
+  font-family: "OpenSans";
+  font-size: 100px;
+  color: white;
+  opacity: 0.2;
+  line-height: 0.9;
+  text-align: end;
+}
+.title {
+  font-family: "Ubuntu-bold";
+  color: white;
+  font-size: 50px;
+  line-height: 1;
+}
+.title span {
+  font-weight: 800;
+}
+.text {
+  color: white;
+  margin-left: 70px;
+}
+.text button {
+ margin-top: 20px;
+ margin: 60px 0;
+ display: block;
+}
+/* OUR RESULTS */
+.third_container{
+    height: auto;
+}
+.numbertwo {
+  font-family: "OpenSans";
+  font-size: 100px;
+  color: black;
+  opacity: 0.2;
+  line-height: 0.9;
+	padding-right: 2px;
+}
+.titletwo {
+  font-family: "Ubuntu-bold";
+  color: #57585b;
+  font-size: 50px;
+  line-height: 1;
+}
+.titletwo span {
+  font-weight: 800;
+}
+.texttwo {
+  margin-left: 70px;
+}
+.secondblock {
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.circles {
+    width: 500px;
+    height: auto;
+  }
+.circle-one,
+.circle-two,
+.circle-three,
+.circle-four {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-box-shadow: 1px 19px 26px -8px rgba(204,217,226,1);
+  -moz-box-shadow: 1px 19px 26px -8px rgba(204,217,226,1);
+  box-shadow: 1px 19px 26px -8px rgba(204,217,226,1);
+  margin: 20px 45px;
+  text-align: center;
+}
+.circles-row1 {
+  margin-top: 35px;
+}
+.circles-row2 {
+  float: right;
+}
+/* TOURS */
+.aboutthree{
+	padding-top: 100px;
+}
+.bluep {
+  color: #0069b2;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-family: "Ubuntu-bold";
+}
+.greyp {
+  color: #57585b;
+  font-size: 15px;
+  margin-bottom: 0;
+  font-family: "Ubuntu-medium";
+}
+.buttontwo{
+	  padding: 8px 0px;
+		color: #004270;
+}
+.buttontwo i{
+	   vertical-align: middle;
+		 padding-left: 5px;
+}
+.gallery{
+	display: flex;
+	flex-direction: row;
+}
+.gallery div {
+	/* margin: 0 5px; */
+	padding: 0;
+}
+.gallery .row {
+	display: flex;
+	justify-content: space-evenly;
+}
+.gallery img {
+	height: 100%;
+}
+.tour1,
+.tour2,
+.tour3,
+.tour4 {
+	position: relative;
+}
+.gallery p {
+	position: absolute;
+  left: 16px;
+}
+.tour-name{
+	color: white;
+	font-family: "Ubuntu-bold";
+	bottom: 40px;
+	font-size: 25px;
+}
+.days{
+	color: white;
+	font-family: "Ubuntu";
+	bottom: 25px;
+	font-size: 12px;
+}
+.price{
+	color: white;
+	bottom: 0px;
+	font-size: 20px;
+}
+
+@media screen and (min-width: 575px){
+	 .numbertwo{
+		display: block!important;
+		text-align: end !important;
+	}
+}
+@media screen and (max-width: 576px){
+	.aboutthree .numbertwo {
+		margin-right: 22px!important;
+	}
+	.gallery{
+		padding: 10px 0;
+	}
+	.gallery{
+		display: block;
+	}
+	.gallery div{
+		margin: 0;
+	}
+	.tour2,
+	.tour3,
+	.tour4{
+		display: inline-block;
+		width: 180px;
+	}
+}
+@media screen and (max-width: 400px){
+	.circles-row1,
+	.circles-row2{
+		justify-content: space-around;
+	}
+	.aboutthree .numbertwo {
+		margin-right: 32px!important;
+	}
+}
+@media screen and (max-width: 353px){
+	.navbar-toggler{
+		margin: auto;
+	}
+}
+@media screen and (min-width : 576px) and (max-width: 767px) {
+	.homecentral button{
+		 margin-left: -45px!important;
+	}
+}
+@media screen and (min-width : 320px) and (max-width: 767px) {
+	.navbar-collapse{
+		background-color: rgba(255,255,255,1);
+		text-align: center;
+		border-radius: 6px;
+	}
+	.select{
+		margin: auto;
+	}
+  .number,
+  .title {
+    text-align: center;
+}
+  .title {
+    margin-left: 13px;
+  }
+  .text {
+    margin-left: 30px;
+  }
+  .text button {
+    margin: 60px auto;
+  }
+  .circles,
+  .abouttwo{
+    margin: 0 auto !important;
+  }
+	.homecentral{
+		height: 50vh;
+	}
+	.homecentraltext{
+		top: 37vh;
+	}
+	.homecentral p{
+		font-size: 25px;
+	}
+	.secondblock {
+			margin: 100px 0 0;
+	}
+	.numbertwo{
+		display: flex;
+    justify-content: normal;
+		text-align: end;
+	}
+	.secondblock {
+    display: flex;
+    justify-content: normal;
+	}
+	.aboutthree .texttwo{
+		margin-left: 0;
+	}
+}
+@media screen and (min-width : 768px) and (max-width: 990px){
+	.navbar-collapse{
+		background-color: rgba(255,255,255,1);
+		text-align: center;
+		border-radius: 6px;
+	}
+	.select{
+		margin: auto;
+	}
+  .text{
+    margin-left: 30px;
+  }
+	.aboutthree .titletwo{
+		 margin-left: 15px;
+	}
+	.secondblock {
+		  width: calc(100% - 450px);
+	    margin: 100px 0;
+	    display: flex;
+	    justify-content: normal;
+	}
+	.circles{
+		width: 450px;
+	}
+	.circle-one,
+	.circle-two,
+	.circle-three,
+	.circle-four {
+	  width: 100px;
+	  height: 100px;
+	}
+	.abouttwo-row{
+		display: flex;
+		justify-content: space-around;
+	}
+	.bluep {
+	  font-size: 25px;
+	}
+	.greyp {
+	  font-size: 10px;
+	}
+	.aboutthree .texttwo{
+	  margin-top: 20px;
+	}
 }
